@@ -1,0 +1,92 @@
+html {
+  -webkit-font-smoothing: antialiased;
+  font-size: 18px;
+  font-family: -apple-system, 'avenir next', avenir, roboto, noto, ubuntu, 'helvetica neue', helvetica, arial, sans-serif;
+  box-sizing: border-box;
+  line-height: 2rem;
+}
+
+*, *:before, *:after, {
+  box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {  
+  line-height: 4rem;
+}
+
+h4, h5, h6 {
+  line-height: 2rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+h6 {
+  font-size: 1rem;  
+}
+
+p, ul, ol {
+  line-height: 2rem;
+}
+
+ul, ul {
+  margin: 0;
+}
+
+p {
+  margin: 0 0 2rem;
+}
+
+span {
+  line-height: 2rem;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+  min-width: 50px;
+}
+
+code {
+  font-size: .8rem;
+  font-weight: bold;
+  padding: 2px 4px;
+  background-color: #eee;
+  border-radius: 3px;
+}
+
+::-webkit-input-placeholder {
+  color: inherit;
+}
+
+:-ms-input-placeholder {
+  color: inherit;
+}
+
+::-ms-input-placeholder{
+  color: inherit;
+}
+
+::placeholder {
+  color: inherit;
+}

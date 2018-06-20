@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html>
+  <head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Framework</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="framework.css">
+    <script src="framework.js"></script>
+  </head>
+
+  <body class="bg-white">
+    <nav class="navbar theme-navy navbar-expand-xs">
+      <div class="container d-flex flex-space-between">
+        <div class="navbar-brand">
+          <a href="#">CSS Framework</a>
+        </div>
+        <ul class="nav">  
+          <li class="nav-item">
+            <a href="https://github.com/nmacawile/css-framework" class="nav-link">Github</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section>
+      <header class="row theme-blue py-1">
+        <div class="container">
+          <h1 class="center row">CSS Framework</h1>
+          <p>
+            A CSS framework made with SASS
+          </p>
+        </div>
+
+      </header>
+      <div class="container d-block py-2">
+        <h1>Index</h1>
+        <ul>        
+          <li><a href="#sec_navbars">Navbars</a></li>
+          <li><a href="#sec_grid">Grid layout</a></li>
+          <li><a href="#sec_forms">Forms</a></li>
+          <li><a href="#sec_colors">Colors and themes</a></li>
+          <li><a href="#sec_border">Border</a></li>
+          <li><a href="#sec_padding">Padding</a></li>
+          <li><a href="#sec_margin">Margin</a></li>
+          <li><a href="#sec_utilities">Utilities</a></li>
+        </ul>
+      </div>
+    </section>
+<div>
+    <section class="container">
+      <h2 id="sec_navbars">Navbars</h2>
+
+      <b>Vertical Navbar</b>
+      <div class="border mb-2 bg-silver">
+
+        <nav class="navbar text-dark mb-1 bg-white">
+          <div class="container">
+            <div class="navbar-brand">
+              <a href="#">Logo</a>
+            </div>
+            <ul class="nav">   
+              <li class="nav-item">
+                <a href="#" class="nav-link">Link 1</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Link 2</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Link 3</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+      </div>
+
+      <b>Horizontal Navbar</b>
+      <div class="border mb-2 bg-silver">
+
+        <nav class="navbar text-dark mb-1 navbar-expand-xs bg-white">
+          <div class="container d-flex flex-nowrap flex-space-between">
+            <div class="navbar-brand">
+              <a href="#">Logo</a>
+            </div>
+            <ul class="nav">   
+              <li class="nav-item">
+                <a href="#" class="nav-link">Link 1</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Link 2</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Link 3</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+      </div>
+
+      <b>Horizontal Navbar with navigation links on the left side</b>
+      <div class="border mb-2 bg-silver">
+
+        <nav class="navbar text-dark mb-1 navbar-expand-xs bg-white">
+          <div class="container d-flex">
+            <div class="navbar-brand">
+              <a href="#">Logo</a>
+            </div>
+            <ul class="nav">   
+              <li class="nav-item">
+                <a href="#" class="nav-link">Link 1</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Link 2</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Link 3</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+      </div>
+
+      <b>Horizontal Navbar with navigation links on both sides</b>
+      <div class="border mb-2 bg-silver">
+
+        <nav class="navbar text-dark mb-1 navbar-expand-xs bg-white">
+          <div class="container d-flex flex-nowrap">
+            <div class="navbar-brand">
+              <a href="#">Logo</a>
+            </div>
+
+            <div class="d-flex flex-space-between width-100">
+              <ul class="nav">   
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Link 1</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Link 2</a>
+                </li>
+              </ul>
+
+              <ul class="nav">   
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Link 3</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Link 4</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>  
+
+      <b>Responsive Navbar</b>
+      <div class="border mb-2 bg-silver">
+
+        <nav class="navbar bg-white text-dark navbar-expand-md mb-1">
+          <div class="container d-flex flex-space-between">
+            <div class="navbar-brand">
+              <a href="#">Logo</a>
+            </div>
+            <button class="nav-toggler" data-target="#resp_nav">
+              <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav collapsed" id="resp_nav">   
+              <li class="nav-item">
+                <a href="#" class="nav-link">Link 1</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Link 2</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Link 3</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+      </div>
+
+      <b>Responsive Navbar with a textbox and a button</b>
+      <div class="border mb-2 bg-silver">
+
+        <nav class="navbar bg-white text-dark navbar-expand-md mb-1">
+          <div class="container d-flex flex-space-between">
+            <div class="navbar-brand">
+              <a href="#">Logo</a>
+            </div>
+            <button class="nav-toggler" data-target="#resp_nav2">
+              <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav collapsed" id="resp_nav2">   
+              <li class="nav-item">
+                <a href="#" class="nav-link">Link 1</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Link 2</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Link 3</a>
+              </li>
+              <li class="nav-form input-group">
+                <input type="text" class="nav-textbox" placeholder="Search">
+                <button class="btn nav-btn"><i class="fas fa-search"></i></button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+      </div>
+
+
+      <b>Dark Navbar</b>
+      <div class="border mb-2 bg-silver">
+
+        <nav class="navbar text-light mb-1 navbar-expand-xs bg-black">
+          <div class="container d-flex flex-nowrap flex-space-between">
+            <div class="navbar-brand">
+              <a href="#">Logo</a>
+            </div>
+            <ul class="nav">   
+              <li class="nav-item">
+                <a href="#" class="nav-link">Link 1</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Link 2</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Link 3</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+      </div>
+
+
+      <b>Colored Navbar</b>
+      <div class="border mb-2 bg-silver">
+
+        <nav class="navbar text-light mb-1 navbar-expand-xs bg-blue">
+          <div class="container d-flex flex-nowrap flex-space-between">
+            <div class="navbar-brand">
+              <a href="#">Logo</a>
+            </div>
+            <ul class="nav">   
+              <li class="nav-item">
+                <a href="#" class="nav-link">Link 1</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Link 2</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Link 3</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+      </div>
+
+      <b>Themed Navbar</b>
+      <div class="border mb-2 bg-silver">
+
+        <nav class="navbar mb-1 navbar-expand-xs theme-navy">
+          <div class="container d-flex flex-nowrap flex-space-between">
+            <div class="navbar-brand">
+              <a href="#">Logo</a>
+            </div>
+            <ul class="nav">   
+              <li class="nav-item">
+                <a href="#" class="nav-link">Link 1</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Link 2</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Link 3</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+      </div>
+
+      <b>Themed responsive Navbar with a textbox and a button</b>
+      <div class="border mb-2 bg-silver">
+        <nav class="navbar theme-navy navbar-expand-md">
+          <div class="container d-flex flex-space-between">
+            <div class="navbar-brand">
+              <a href="#">Logo</a>
+            </div>
+            <button class="nav-toggler" data-target="#resp_nav3">
+              <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav collapsed" id="resp_nav3">   
+              <li class="nav-item">
+                <a href="#" class="nav-link">Link 1</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Link 2</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Link 3</a>
+              </li>
+              <li class="nav-form input-group">
+                <input type="text" class="nav-textbox theme-blue" placeholder="Search">
+                <button class="btn nav-btn theme-blue"><i class="fas fa-search"></i></button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+    </section>
+
+    <section class="container">
+      <h2 id="sec_grid">Grid layout</h2>
+
+      <b>Columns</b>
+      <div class="border mb-2 bg-silver">
+        <div class="row">
+          <div class="col-xs-1 theme-aqua center">
+            1
+          </div>
+          <div class="col-xs-1 theme-blue center">
+            1
+          </div>
+          <div class="col-xs-1 theme-aqua center">
+            1
+          </div>
+          <div class="col-xs-1 theme-blue center">
+            1
+          </div>
+          <div class="col-xs-1 theme-aqua center">
+            1
+          </div>
+          <div class="col-xs-1 theme-blue center">
+            1
+          </div>
+          <div class="col-xs-1 theme-aqua center">
+            1
+          </div>
+          <div class="col-xs-1 theme-blue center">
+            1
+          </div>
+          <div class="col-xs-1 theme-aqua center">
+            1
+          </div>
+          <div class="col-xs-1 theme-blue center">
+            1
+          </div>
+          <div class="col-xs-1 theme-aqua center">
+            1
+          </div>
+          <div class="col-xs-1 theme-blue center">
+            1
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-2 theme-yellow center">
+            2
+          </div>
+          <div class="col-xs-2 theme-orange center">
+            2
+          </div>
+          <div class="col-xs-2 theme-yellow center">
+            2
+          </div>
+          <div class="col-xs-2 theme-orange center">
+            2
+          </div>
+          <div class="col-xs-2 theme-yellow center">
+            2
+          </div>
+          <div class="col-xs-2 theme-orange center">
+            2
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-3 theme-maroon center">
+            3
+          </div>
+          <div class="col-xs-3 theme-fuchsia center">
+            3
+          </div>
+          <div class="col-xs-3 theme-maroon center">
+            3
+          </div>
+          <div class="col-xs-3 theme-fuchsia center">
+            3
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-4 theme-red center">
+            4
+          </div>
+          <div class="col-xs-4 theme-orange center">
+            4
+          </div>
+          <div class="col-xs-4 theme-red center">
+            4
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-6 theme-gray center">
+            6
+          </div>
+          <div class="col-xs-6 theme-silver center">
+            6
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 theme-black center">12</div>
+        </div>       
+
+      </div>
+
+
+      <b>Offsets</b>
+      <div class="border mb-2 bg-silver">
+        <div class="row">
+          <div class="col-xs-8 offset-xs-2 theme-black center">
+            col-xs-8 <br>
+            with offset-xs-2
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2 id="sec_forms">Forms</h2>
+
+      <b>Basic Form</b>
+      <div class="border mb-2 bg-silver p-1">
+        <form class="p-1 col-md-6 offset-md-3 bg-white rounded-5">
+          <h2>Sign In</h2>
+          <label class="form-control" for="textbox1">Username</label>
+          <input type="text" id="textbox1" class="form-control input-block">
+          <label class="form-control" for="password1">Password</label>
+          <input type="password" id="password1" class="form-control input-block">
+          <label><input type="checkbox"> Remember me</label>
+          <button type="submit" class="btn input-block">Sign In</button>
+        </form>
+      </div>
+
+      <b>Themed Form</b>
+      <div class="border mb-2 bg-silver p-1">
+        <form class="p-1 col-md-6 offset-md-3 theme-navy rounded-5">
+          <h2>Sign In</h2>
+          <label for="textbox2" class="form-control">Username</label>
+          <input type="text" id="textbox2" class="theme-blue form-control input-block">
+          <label for="password2" class="form-control">Password</label>
+          <input type="password" id="password2" class="theme-blue form-control input-block">
+          <label><input type="checkbox"> Remember me</label>
+          <button type="submit" class="btn input-block theme-blue">Sign In</button>
+        </form>
+      </div>
+
+      <b>Inline Form group</b>
+      <div class="border mb-2 bg-silver p-1">
+        <div class="input-group col-md-6 offset-md-3 width-100 border">
+          <input type="text" id="textbox2" placeholder="Search" class="form-inline width-100">
+          <button type="button" class="btn flex-shrink-0">Search</button>
+        </div>
+      </div>
+
+      <b>Inline Button group</b>
+      <div class="border mb-2 bg-silver p-1">
+        <form class="p-1 col-md-6 offset-md-3 bg-white rounded-5">
+          <h2>Subscribe</h2>
+          <label for="textbox3" class="form-control">Name</label>
+          <input type="text" id="textbox3" class="form-control input-block">
+          <label for="textbox4" class="form-control">Email</label>
+          <input type="email" id="textbox4" class="form-control input-block">
+
+          <div class="input-group">
+            <button type="reset" class="btn input-block">Reset</button>
+            <button type="submit" class="btn input-block">Submit</button>
+          </div>
+        </form>
+      </div>
+
+    </section>
+
+
+    <section class="container">
+      <h2 id="sec_colors">Colors and themes</h2>
+
+      <b>Themes</b>
+      <div class="border mb-2 bg-white p-1">
+        <div class="border width-100 row">
+          <div class="col-xs-4">
+            <button class="btn input-block theme-navy">navy</button>   
+            <button class="btn input-block theme-blue">blue</button>
+            <button class="btn input-block theme-aqua">aqua</button>   
+            <button class="btn input-block theme-teal">teal</button>
+            <button class="btn input-block theme-olive">olive</button> 
+          </div>
+          <div class="col-xs-4">
+            <button class="btn input-block theme-green">green</button>
+            <button class="btn input-block theme-lime">lime</button>   
+            <button class="btn input-block theme-yellow">yellow</button>
+            <button class="btn input-block theme-orange">orange</button>   
+            <button class="btn input-block theme-red">red</button>
+          </div>
+          <div class="col-xs-4">
+            <button class="btn input-block theme-maroon">maroon</button>   
+            <button class="btn input-block theme-fuchsia">fuchsia</button>
+            <button class="btn input-block theme-purple">purple</button>   
+            <button class="btn input-block theme-gray">gray</button>   
+            <button class="btn input-block theme-silver">silver</button>
+          </div>
+          <div class="row">
+            <button class="btn input-block theme-white">white</button>
+            <button class="btn input-block theme-black">black</button>
+          </div>
+        </div>
+      </div>  
+
+      <b>Background</b>
+      <div class="border mb-2 bg-white p-1">
+        <div class="border width-100 row">
+          <div class="col-xs-4">
+            <button class="btn input-block no-border bg-navy">navy</button>   
+            <button class="btn input-block no-border bg-blue">blue</button>
+            <button class="btn input-block no-border bg-aqua">aqua</button>   
+            <button class="btn input-block no-border bg-teal">teal</button>
+            <button class="btn input-block no-border bg-olive">olive</button> 
+          </div>
+          <div class="col-xs-4">
+            <button class="btn input-block no-border bg-green">green</button>
+            <button class="btn input-block no-border bg-lime">lime</button>   
+            <button class="btn input-block no-border bg-yellow">yellow</button>
+            <button class="btn input-block no-border bg-orange">orange</button>   
+            <button class="btn input-block no-border bg-red">red</button>
+          </div>
+          <div class="col-xs-4">
+            <button class="btn input-block no-border bg-maroon">maroon</button>   
+            <button class="btn input-block no-border bg-fuchsia">fuchsia</button>
+            <button class="btn input-block no-border bg-purple">purple</button>   
+            <button class="btn input-block no-border bg-gray">gray</button>   
+            <button class="btn input-block no-border bg-silver">silver</button>
+          </div>
+          <div class="row">
+            <button class="btn input-block no-border bg-white">white</button>
+            <button class="btn input-block no-border bg-black">black</button>
+          </div>
+        </div>
+      </div>  
+
+      <b>Text (with shadow)</b>
+      <div class="border mb-2 bg-white p-1">
+        <div class="border width-100 row bg-silver">
+          <div class="col-xs-4">
+            <button class="btn input-block bg-transparent text-shadow no-border navy">navy</button>   
+            <button class="btn input-block bg-transparent text-shadow no-border blue">blue</button>
+            <button class="btn input-block bg-transparent text-shadow no-border aqua">aqua</button>   
+            <button class="btn input-block bg-transparent text-shadow no-border teal">teal</button>
+            <button class="btn input-block bg-transparent text-shadow no-border olive">olive</button> 
+          </div>
+          <div class="col-xs-4">
+            <button class="btn input-block bg-transparent text-shadow no-border green">green</button>
+            <button class="btn input-block bg-transparent text-shadow no-border lime">lime</button>   
+            <button class="btn input-block bg-transparent text-shadow no-border yellow">yellow</button>
+            <button class="btn input-block bg-transparent text-shadow no-border orange">orange</button>   
+            <button class="btn input-block bg-transparent text-shadow no-border red">red</button>
+          </div>
+          <div class="col-xs-4">
+            <button class="btn input-block bg-transparent text-shadow no-border maroon">maroon</button>   
+            <button class="btn input-block bg-transparent text-shadow no-border fuchsia">fuchsia</button>
+            <button class="btn input-block bg-transparent text-shadow no-border purple">purple</button>   
+            <button class="btn input-block bg-transparent text-shadow no-border gray">gray</button>   
+            <button class="btn input-block bg-transparent text-shadow no-border silver">silver</button>
+          </div>
+          <div class="row">
+            <button class="btn input-block bg-transparent text-shadow no-border white">white</button>
+            <button class="btn input-block bg-transparent text-shadow no-border black">black</button>
+          </div>
+        </div>
+      </div> 
+
+
+    </section>
+
+    <section class="container">
+      <h2 id="sec_border">Border</h2>
+
+      <b>Border</b>
+      <div class="border mb-2 p-1">
+        <div class="border center">
+          Simple Border
+        </div>
+      </div>
+
+      <b>No border</b>
+      <div class="border mb-2 p-1">
+        <div class="no-border center">
+          No Border
+        </div>
+      </div>
+
+      <b>Border with custom width</b>
+      <div class="border mb-2 p-1">
+        <div class="b-10 center">
+          Simple Border
+        </div>
+      </div>
+
+      <b>Border top</b>
+      <div class="border mb-2 p-1">
+        <div class="bt-5 center">
+          Top
+        </div>
+      </div>
+
+      <b>Border bottom</b>
+      <div class="border mb-2 p-1">
+        <div class="bb-5 center">
+          Bottom
+        </div>
+      </div>
+
+      <b>Border left</b>
+      <div class="border mb-2 p-1">
+        <div class="bl-5 center">
+          Left
+        </div>
+      </div>
+
+      <b>Border right</b>
+      <div class="border mb-2 p-1">
+        <div class="br-5 center">
+          Right
+        </div>
+      </div>
+
+      <b>Border left and right</b>
+      <div class="border mb-2 p-1">
+        <div class="bx-5 center">
+          Left and right
+        </div>
+      </div>
+
+      <b>Border top and bottom</b>
+      <div class="border mb-2 p-1">
+        <div class="by-5 center">
+          Top and bottom
+        </div>
+      </div>
+    </section>
+
+
+    <section class="container">
+      <h2 id="sec_padding">Padding</h2>
+
+      <b>Around</b>
+      <div class="border mb-2 p-1">
+        <div class="bg-silver p-2">
+          <div class="border center bg-gray">
+            Content inside the padded div
+          </div>
+        </div>
+      </div>
+
+      <b>Top</b>
+      <div class="border mb-2 p-1">
+        <div class="bg-silver pt-2">
+          <div class="border center bg-gray">
+            Content inside the padded div
+          </div>
+        </div>
+      </div>
+
+      <b>Bottom</b>
+      <div class="border mb-2 p-1">
+        <div class="bg-silver pb-2">
+          <div class="border center bg-gray">
+            Content inside the padded div
+          </div>
+        </div>
+      </div>
+
+      <b>Left</b>
+      <div class="border mb-2 p-1">
+        <div class="bg-silver pl-2">
+          <div class="border center bg-gray">
+            Content inside the padded div
+          </div>
+        </div>
+      </div>
+
+      <b>Right</b>
+      <div class="border mb-2 p-1">
+        <div class="bg-silver pr-2">
+          <div class="border center bg-gray">
+            Content inside the padded div
+          </div>
+        </div>
+      </div>
+
+      <b>Top and bottom</b>
+      <div class="border mb-2 p-1">
+        <div class="bg-silver py-2">
+          <div class="border center bg-gray">
+            Content inside the padded div
+          </div>
+        </div>
+      </div>
+
+      <b>Left and right</b>
+      <div class="border mb-2 p-1">
+        <div class="bg-silver px-2">
+          <div class="border center bg-gray">
+            Content inside the padded div
+          </div>
+        </div>
+      </div>      
+    </section>
+
+    <section class="container">
+      <h2 id="sec_margin">Margin</h2>
+
+      <b>Around</b>
+      <div class="border mb-2 p-1">
+        <div class="bg-silver border">
+          <div class="bg-gray center m-2">
+            Content with margin
+          </div>
+        </div>
+      </div>
+
+      <b>Top</b>
+      <div class="border mb-2 p-1">
+        <div class="bg-silver border">
+          <div class="bg-gray center mt-2">
+            Content with margin
+          </div>
+        </div>
+      </div>
+
+      <b>Bottom</b>
+      <div class="border mb-2 p-1">
+        <div class="bg-silver border">
+          <div class="bg-gray center mb-2">
+            Content with margin
+          </div>
+        </div>
+      </div>
+
+      <b>Left</b>
+      <div class="border mb-2 p-1">
+        <div class="bg-silver border">
+          <div class="bg-gray center ml-2">
+            Content with margin
+          </div>
+        </div>
+      </div>
+
+      <b>Right</b>
+      <div class="border mb-2 p-1">
+        <div class="bg-silver border">
+          <div class="bg-gray center mr-2">
+            Content with margin
+          </div>
+        </div>
+      </div>
+
+      <b>Top and bottom</b>
+      <div class="border mb-2 p-1">
+        <div class="bg-silver border">
+          <div class="bg-gray center my-2">
+            Content with margin
+          </div>
+        </div>
+      </div>
+
+      <b>Left and right</b>
+      <div class="border mb-2 p-1">
+        <div class="bg-silver border">
+          <div class="bg-gray center mx-2">
+            Content with margin
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="container">
+      <h2 id="sec_utilities">Utilities</h2>
+
+      <h4>Display properties</h4>
+      <ul class="mb-2">
+        <li><b>Block</b> - <code>d-block</code></li>
+        <li><b>Inline</b> - <code>d-inline</code></li>
+        <li><b>Inline Block</b> - <code>d-inline-block</code></li>
+        <li><b>Flex</b> - <code>d-flex</code></li>
+        <li><b>Hidden</b> - <code>hidden</code>, <code>d-hidden</code>, or <code>d-none</code></li>        
+      </ul>
+
+      <h4>Float and clearfix</h4>
+      <ul class="mb-2">
+        <li><b>Left</b> - <code>float-left</code></li>
+        <li><b>Right</b> - <code>float-right</code></li>
+        <li><b>Clearfix</b> - <code>clearfix</code></li>        
+      </ul>
+
+      <h4>Text alignment</h4>
+      <ul class="mb-2">
+        <li><b>Left</b> - <code>left</code></li>
+        <li><b>Right</b> - <code>right</code></li>
+        <li><b>Center</b> - <code>center</code></li>        
+      </ul>
+
+
+      <h4>Flexbox properties</h4>
+      <ul class="mb-2">
+        <li>
+          <h5>Justify content</h5>
+          <ul>          
+            <li><b>Start</b> - <code>flex-start</code></li> 
+            <li><b>End</b> - <code>flex-end</code></li> 
+            <li><b>Center</b> - <code>flex-center</code></li> 
+            <li><b>Space around</b> - <code>flex-space-around</code></li> 
+            <li><b>Space between</b> - <code>flex-space-between</code></li> 
+          </ul>
+        </li> 
+        <li>
+          <h5>Flex direction</h5>
+          <ul>          
+            <li><b>Row</b> - <code>flex-direction-row</code></li> 
+            <li><b>Column</b> - <code>flex-direction-column</code></li>
+          </ul>
+        </li> 
+        <li>
+          <h5>Wrap</h5>
+          <ul>          
+            <li><b>Wrap</b> - <code>flex-wrap</code></li> 
+            <li><b>No wrap</b> - <code>flex-nowrap</code></li>
+          </ul>
+        </li>  
+        <li>
+          <h5>Grow and shrink</h5>
+          <ul>          
+            <li><b>Grow</b> - <code>flex-grow-1</code></li> 
+            <li><b>No grow</b> - <code>flex-grow-0</code></li>
+            <li><b>Shrink</b> - <code>flex-shrink-1</code></li> 
+            <li><b>No shrink</b> - <code>flex-shrink-0</code></li>
+          </ul>
+        </li>           
+      </ul>
+
+      <h4>Rounded corners</h4>
+      <ul class="mb-2">
+        <li><b>Custom radius</b> - <code>rounded-{radius}</code></li>
+        <em>radius</em> is in pixels. It can be 0 or any multiple of 5 up to 30 (0, 5, 10, 15 ... 30)
+        e.g.<code>rounded-5</code>
+        <li><b>Circle</b> - <code>rounded-circle</code></li>
+      </ul>
+      
+      <h4>Border</h4>
+      <ul class="mb-2">
+        <li><b>Around (1px)</b> - <code>border</code></li>
+        <li><b>No border</b> - <code>no-border</code></li>
+        <li><b>Custom width</b> - <code>b-{border-width}</code></li>
+        <em>border-width</em> is in pixels. It can be anywhere from 0 to 10.
+        e.g. <code>b-5</code> produces a 5px border
+        <li><b>Partial border</b> - <code>b{direction}-{border-width}</code></li>  
+        possible codes for <em>direction</em> are: 
+        <code>t</code> (top), <code>b</code> (bottom), 
+        <code>l</code> (left), <code>r</code> (right), 
+        <code>x</code> (left and right) and <code>y</code> (top and bottom) 
+        e.g. <code>bt-5</code> produces a 5px border to the top     
+      </ul>
+
+      <h4>Margin and padding</h4>
+      <ul class="mb-2">
+        <li><b>Custom margin/padding width</b> - <code>m-{width}</code> and <code>p-{width}</code></li>
+        <em>width</em> is in <em>rem</em> unit. It can be anywhere between 0 and 10.
+        e.g. <code>m-2</code> produces a 2 rem margin, <code>p-2</code> produces a 2 rem margin
+        <li><b>Partial margin/padding</b> - <code>m{direction}-{width}</code> and <code>p{direction}-{width}</code></li>  
+        possible codes for <em>direction</em> are: 
+        <code>t</code> (top), <code>b</code> (bottom), 
+        <code>l</code> (left), <code>r</code> (right), 
+        <code>x</code> (left and right) and <code>y</code> (top and bottom) 
+        e.g. <code>mt-2</code> produces a 2 rem margin to the top, <code>px-3</code> produces 3 rem paddings to the left and right sides.
+       
+      </ul>
+
+      <h4>Others</h4>
+      <ul class="mb-2">
+        <li><b>Text shadow</b> - <code>text-shadow</code></li>
+        <li><b>Hide overflow</b> - <code>overflow-hidden</code></li>
+        <li><b>Auto overflow</b> - <code>overflow-auto</code></li>
+      </ul>
+
+    </section>
+  </body>
+</html>

@@ -1,0 +1,163 @@
+/* Values taken from https://clrs.cc/ */
+$themes: (
+  ("navy", #001f3f, #80bfff),
+  ("blue", #0074d9, #b3dbff),
+  ("aqua", #7fdbff, #004966),
+  ("teal", #39cccc, #000),
+  ("olive", #3d9970, #163728),
+  ("green", #2ecc40, #0e3e14),
+  ("lime", #01ff70, #00662c),
+  ("yellow", #ffdc00, #665800),
+  ("orange", #ff851b, #663000),
+  ("red", #ff4136, #800600),
+  ("maroon", #85144b, #eb7ab1),
+  ("fuchsia", #f012be, #65064f),
+  ("purple", #b10dc9, #efa9f9),
+  ("gray", #aaa, #000),
+  ("silver", #ddd, #000),
+  ("white", #fff, #111),
+  ("black", #111, #fff)
+);
+
+/* Functions for querying themes */
+@function bgcolor($label) {
+  @each $theme in $themes {
+    @if nth($theme, 1) == $label {
+      @return nth($theme, 2);
+    }
+  }
+  @return null;
+}
+
+@function txcolor($label) {
+  @each $theme in $themes {
+    @if nth($theme, 1) == $label {
+      @return nth($theme, 3);
+    }
+  }
+  @return null;
+}
+
+/* DEFAULT FONT COLOR */
+html {
+  color: #222;
+}
+
+/* Backgrounds */
+@each $label, $color in $themes {
+  .bg-#{$label} {
+    background-color: $color !important;
+  }
+}
+
+.bg-transparent {
+  background-color: transparent !important;
+}
+
+/* Colors */
+@each $label, $color in $themes {
+  .#{$label} {
+    color: $color !important;
+  }
+}
+
+/* Border colors */
+@each $label, $color in $themes {
+  .border--#{$label} {
+    border-color: $color;
+  }
+}
+
+/* Fills for SVG */
+@each $label, $color in $themes {
+  .fill-#{$label} {
+    fill: $color;
+  }
+}
+
+/* Strokes for SVG */
+@each $label, $color in $themes {
+  .stroke-#{$label} {
+    stroke: $color;
+  }
+}
+
+/* THEMES */
+@each $label, $bgcolor, $txcolor in $themes {  
+  .theme-#{$label} {
+    background-color: $bgcolor !important;
+    border-color: $bgcolor !important;
+    color: $txcolor !important;
+    .nav-link, .navbar-brand a {
+      background-color: $bgcolor;
+      color: $txcolor;
+    }
+    /* Excludes white and black buttons for nav-links hover effects */
+    @if $label != "black" and $label != "white" {
+      .nav-link:hover {
+        background-color: lighten($bgcolor, 20) !important;
+        border-color: $bgcolor;
+        text-shadow: 1px 1px $bgcolor;
+      }
+    }
+  }  
+}
+
+/* Hover effects for colored buttons and links */
+/* Excludes white and black buttons */
+@each $label, $bg in $themes {
+  @if $label != "black" and $label != "white" {
+    button.theme-#{$label}:hover, a.theme-#{$label}:hover {
+      background-color: lighten($bg, 20) !important;
+      border-color: $bg;
+      text-shadow: 1px 1px $bg;
+    }
+  }
+}
+
+/* Hover effects for white and black buttons and links*/
+$bw: ("black", "white");
+@each $color in $bw {
+  button.theme-#{$color}:hover, a.theme-#{$color}:hover, .theme-#{$color} .nav-link:hover {
+    color: bgcolor($color) !important;
+    background-color: txcolor($color) !important;
+  }
+}
+
+/* Dark and light texts that go with bg-xxx classes, whose text colors are not set */
+$ld: (
+  ("light", rgba(255,255,255,.8), rgba(255,255,255, 1)),
+  ("dark", rgba(0,0,0,.8), rgba(0,0,0, 1))
+);
+
+@each $name, $color, $highlighted in $ld {
+  .text-#{$name} {
+    color: $color;
+    .navbar-brand a, .nav-link {
+      color: $color;
+    }
+    .nav-link {
+      border-bottom: 4px solid transparent;
+    }
+    .nav-link:hover, .navbar-brand a:hover {
+      color: $highlighted; 
+    }
+    .nav-link:hover {
+     border-bottom: 4px solid currentColor;
+    }
+  }
+}
+
+
+/* Makes all unstyled anchors blue */
+a {
+  color: bgcolor("blue");
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+code {
+  color: bgcolor("black");
+}
