@@ -7,18 +7,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="framework.css">
-    <script src="framework.js"></script>
   </head>
 
   <body class="bg-white">
     <nav class="navbar theme-navy navbar-expand-xs">
       <div class="container d-flex flex-space-between">
         <div class="navbar-brand">
-          <a href="#">CSS Framework</a>
+          <a href="javascript:">CSS Framework</a>
         </div>
         <ul class="nav">  
           <li class="nav-item">
-            <a href="https://github.com/nmacawile/css-framework" class="nav-link">Github</a>
+            <a href="https://github.com/nmacawile/css-framework" class="nav-link"><i class="fab fa-github"></i></a>
           </li>
         </ul>
       </div>
@@ -35,8 +34,9 @@
 
       </header>
       <div class="container d-block py-2">
-        <h1>Index</h1>
-        <ul>        
+        <h1 id="index">Index</h1>
+        <ul>
+          <li><a href="#how_to_use">How to use</a></li>
           <li><a href="#sec_navbars">Navbars</a></li>
           <li><a href="#sec_grid">Grid layout</a></li>
           <li><a href="#sec_forms">Forms</a></li>
@@ -48,27 +48,45 @@
         </ul>
       </div>
     </section>
-<div>
+
+    <section class="container">
+      <h2 id="how_to_use">How to use</h2>
+      <small><a href="#index">Back to top</a></small>
+      <ol>
+        <li>Copy <code>framework.js</code> and <code>framework.css</code> into your project directory
+        <li>Add these lines to the <code>head</code> of your page.
+          <pre class="border mb-2 bg-silver overflow-auto code-block"
+>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://use.fontawesome.com/releases/v5.0.13/css/all.css&quot; integrity=&quot;sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;framework.css&quot;&gt;</pre></li>
+        <li>Add this line right before the end of the<code>body</code> of your page.
+          <pre class="border mb-2 bg-silver overflow-auto code-block"
+>&lt;script src=&quot;framework.js&quot;&gt;&lt;/script&gt;</pre></li>
+      </ol>
+    </section>
+
     <section class="container">
       <h2 id="sec_navbars">Navbars</h2>
+      <small><a href="#index">Back to top</a></small>
 
-      <b>Vertical Navbar</b>
-      <div class="border mb-2 bg-silver">
+      <h3>Vertical Navbar</h3>
+      <div class="border mb-1 bg-silver overflow-auto">
 
         <nav class="navbar text-dark mb-1 bg-white">
           <div class="container">
             <div class="navbar-brand">
-              <a href="#">Logo</a>
+              <a href="javascript:">Logo</a>
             </div>
             <ul class="nav">   
               <li class="nav-item">
-                <a href="#" class="nav-link">Link 1</a>
+                <a href="javascript:" class="nav-link">Link 1</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">Link 2</a>
+                <a href="javascript:" class="nav-link">Link 2</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">Link 3</a>
+                <a href="javascript:" class="nav-link">Link 3</a>
               </li>
             </ul>
           </div>
@@ -76,23 +94,44 @@
 
       </div>
 
-      <b>Horizontal Navbar</b>
-      <div class="border mb-2 bg-silver">
+      <button type="button" data-target="vert-nav-code" class="btn code-toggler d-block mb-1">Show code</button>
+      <pre id="vert-nav-code" class="hidden border mb-2 bg-silver overflow-auto code-block"
+>&lt;nav class=&quot;navbar text-dark mb-1 bg-white&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;navbar-brand&quot;&gt;
+      &lt;a href=&quot;#&quot;&gt;Logo&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;ul class=&quot;nav&quot;&gt;   
+      &lt;li class=&quot;nav-item&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;Link 1&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;nav-item&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;Link 2&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;nav-item&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;Link 3&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</pre>
+
+      <h3>Horizontal Navbar</h3>
+      <div class="border mb-1 bg-silver overflow-auto">
 
         <nav class="navbar text-dark mb-1 navbar-expand-xs bg-white">
           <div class="container d-flex flex-nowrap flex-space-between">
             <div class="navbar-brand">
-              <a href="#">Logo</a>
+              <a href="javascript:">Logo</a>
             </div>
             <ul class="nav">   
               <li class="nav-item">
-                <a href="#" class="nav-link">Link 1</a>
+                <a href="javascript:" class="nav-link">Link 1</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">Link 2</a>
+                <a href="javascript:" class="nav-link">Link 2</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">Link 3</a>
+                <a href="javascript:" class="nav-link">Link 3</a>
               </li>
             </ul>
           </div>
@@ -100,23 +139,44 @@
 
       </div>
 
-      <b>Horizontal Navbar with navigation links on the left side</b>
-      <div class="border mb-2 bg-silver">
+      <button type="button" data-target="hori-nav-code" class="btn code-toggler d-block mb-1">Show code</button>
+      <pre id="hori-nav-code" class="hidden border mb-2 bg-silver overflow-auto code-block"
+>&lt;nav class=&quot;navbar text-dark mb-1 navbar-expand-xs bg-white&quot;&gt;
+  &lt;div class=&quot;container d-flex flex-nowrap flex-space-between&quot;&gt;
+    &lt;div class=&quot;navbar-brand&quot;&gt;
+      &lt;a href=&quot;#&quot;&gt;Logo&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;ul class=&quot;nav&quot;&gt;   
+      &lt;li class=&quot;nav-item&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;Link 1&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;nav-item&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;Link 2&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;nav-item&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;Link 3&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</pre>
+
+      <h3>Horizontal Navbar with navigation links on the left side</h3>
+      <div class="border mb-1 bg-silver overflow-auto">
 
         <nav class="navbar text-dark mb-1 navbar-expand-xs bg-white">
           <div class="container d-flex">
             <div class="navbar-brand">
-              <a href="#">Logo</a>
+              <a href="javascript:">Logo</a>
             </div>
             <ul class="nav">   
               <li class="nav-item">
-                <a href="#" class="nav-link">Link 1</a>
+                <a href="javascript:" class="nav-link">Link 1</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">Link 2</a>
+                <a href="javascript:" class="nav-link">Link 2</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">Link 3</a>
+                <a href="javascript:" class="nav-link">Link 3</a>
               </li>
             </ul>
           </div>
@@ -124,59 +184,110 @@
 
       </div>
 
-      <b>Horizontal Navbar with navigation links on both sides</b>
-      <div class="border mb-2 bg-silver">
+      <button type="button" data-target="hori-nav-l" class="btn code-toggler d-block mb-1">Show code</button>
+      <pre id="hori-nav-l" class="hidden border mb-2 bg-silver overflow-auto code-block"
+>&lt;nav class=&quot;navbar text-dark mb-1 navbar-expand-xs bg-white&quot;&gt;
+  &lt;div class=&quot;container d-flex&quot;&gt;
+    &lt;div class=&quot;navbar-brand&quot;&gt;
+      &lt;a href=&quot;#&quot;&gt;Logo&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;ul class=&quot;nav&quot;&gt;   
+      &lt;li class=&quot;nav-item&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;Link 1&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;nav-item&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;Link 2&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;nav-item&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;Link 3&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</pre>
+
+      <h3>Horizontal Navbar with navigation links on both sides</h3>
+      <div class="border mb-1 bg-silver overflow-auto">
 
         <nav class="navbar text-dark mb-1 navbar-expand-xs bg-white">
           <div class="container d-flex flex-nowrap">
             <div class="navbar-brand">
-              <a href="#">Logo</a>
+              <a href="javascript:">Logo</a>
             </div>
 
             <div class="d-flex flex-space-between width-100">
               <ul class="nav">   
                 <li class="nav-item">
-                  <a href="#" class="nav-link">Link 1</a>
+                  <a href="javascript:" class="nav-link">Link 1</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link">Link 2</a>
+                  <a href="javascript:" class="nav-link">Link 2</a>
                 </li>
               </ul>
 
               <ul class="nav">   
                 <li class="nav-item">
-                  <a href="#" class="nav-link">Link 3</a>
+                  <a href="javascript:" class="nav-link">Link 3</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link">Link 4</a>
+                  <a href="javascript:" class="nav-link">Link 4</a>
                 </li>
               </ul>
             </div>
           </div>
         </nav>
 
-      </div>  
+      </div>
 
-      <b>Responsive Navbar</b>
-      <div class="border mb-2 bg-silver">
+      <button type="button" data-target="hori-nav-lr-code" class="btn code-toggler d-block mb-1">Show code</button>
+      <pre id="hori-nav-lr-code" class="hidden border mb-2 bg-silver overflow-auto code-block"
+>&lt;nav class=&quot;navbar text-dark mb-1 navbar-expand-xs bg-white&quot;&gt;
+  &lt;div class=&quot;container d-flex flex-nowrap&quot;&gt;
+    &lt;div class=&quot;navbar-brand&quot;&gt;
+      &lt;a href=&quot;#&quot;&gt;Logo&lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;d-flex flex-space-between width-100&quot;&gt;
+      &lt;ul class=&quot;nav&quot;&gt;   
+        &lt;li class=&quot;nav-item&quot;&gt;
+          &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;Link 1&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;
+          &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;Link 2&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+
+      &lt;ul class=&quot;nav&quot;&gt;   
+        &lt;li class=&quot;nav-item&quot;&gt;
+          &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;Link 3&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;
+          &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;Link 4&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</pre>
+
+      <h3>Responsive Navbar</h3>
+      <div class="border mb-1 bg-silver overflow-auto">
 
         <nav class="navbar bg-white text-dark navbar-expand-md mb-1">
           <div class="container d-flex flex-space-between">
             <div class="navbar-brand">
-              <a href="#">Logo</a>
+              <a href="javascript:">Logo</a>
             </div>
             <button class="nav-toggler" data-target="#resp_nav">
               <i class="fas fa-bars"></i>
             </button>
             <ul class="nav collapsed" id="resp_nav">   
               <li class="nav-item">
-                <a href="#" class="nav-link">Link 1</a>
+                <a href="javascript:" class="nav-link">Link 1</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">Link 2</a>
+                <a href="javascript:" class="nav-link">Link 2</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">Link 3</a>
+                <a href="javascript:" class="nav-link">Link 3</a>
               </li>
             </ul>
           </div>
@@ -184,26 +295,50 @@
 
       </div>
 
-      <b>Responsive Navbar with a textbox and a button</b>
-      <div class="border mb-2 bg-silver">
+      <button type="button" data-target="resp-nav-code" class="btn code-toggler d-block mb-1">Show code</button>
+      <pre id="resp-nav-code" class="hidden border mb-2 bg-silver overflow-auto code-block"
+>&lt;nav class=&quot;navbar bg-white text-dark navbar-expand-md mb-1&quot;&gt;
+  &lt;div class=&quot;container d-flex flex-space-between&quot;&gt;
+    &lt;div class=&quot;navbar-brand&quot;&gt;
+      &lt;a href=&quot;#&quot;&gt;Logo&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;button class=&quot;nav-toggler&quot; data-target=&quot;#resp_nav&quot;&gt;
+      &lt;i class=&quot;fas fa-bars&quot;&gt;&lt;/i&gt;
+    &lt;/button&gt;
+    &lt;ul class=&quot;nav collapsed&quot; id=&quot;resp_nav&quot;&gt;   
+      &lt;li class=&quot;nav-item&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;Link 1&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;nav-item&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;Link 2&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;nav-item&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;Link 3&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</pre>
+
+      <h3>Responsive Navbar with a textbox and a button</h3>
+      <div class="border mb-1 bg-silver overflow-auto">
 
         <nav class="navbar bg-white text-dark navbar-expand-md mb-1">
           <div class="container d-flex flex-space-between">
             <div class="navbar-brand">
-              <a href="#">Logo</a>
+              <a href="javascript:">Logo</a>
             </div>
             <button class="nav-toggler" data-target="#resp_nav2">
               <i class="fas fa-bars"></i>
             </button>
             <ul class="nav collapsed" id="resp_nav2">   
               <li class="nav-item">
-                <a href="#" class="nav-link">Link 1</a>
+                <a href="javascript:" class="nav-link">Link 1</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">Link 2</a>
+                <a href="javascript:" class="nav-link">Link 2</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">Link 3</a>
+                <a href="javascript:" class="nav-link">Link 3</a>
               </li>
               <li class="nav-form input-group">
                 <input type="text" class="nav-textbox" placeholder="Search">
@@ -215,24 +350,52 @@
 
       </div>
 
+      <button type="button" data-target="resp-nav-2-code" class="btn code-toggler d-block mb-1">Show code</button>
+      <pre id="resp-nav-2-code" class="hidden border mb-2 bg-silver overflow-auto code-block"
+>&lt;nav class=&quot;navbar bg-white text-dark navbar-expand-md mb-1&quot;&gt;
+  &lt;div class=&quot;container d-flex flex-space-between&quot;&gt;
+    &lt;div class=&quot;navbar-brand&quot;&gt;
+      &lt;a href=&quot;#&quot;&gt;Logo&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;button class=&quot;nav-toggler&quot; data-target=&quot;#resp_nav2&quot;&gt;
+      &lt;i class=&quot;fas fa-bars&quot;&gt;&lt;/i&gt;
+    &lt;/button&gt;
+    &lt;ul class=&quot;nav collapsed&quot; id=&quot;resp_nav2&quot;&gt;   
+      &lt;li class=&quot;nav-item&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;Link 1&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;nav-item&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;Link 2&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;nav-item&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;Link 3&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;nav-form input-group&quot;&gt;
+        &lt;input type=&quot;text&quot; class=&quot;nav-textbox&quot; placeholder=&quot;Search&quot;&gt;
+        &lt;button class=&quot;btn nav-btn&quot;&gt;&lt;i class=&quot;fas fa-search&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</pre>
 
-      <b>Dark Navbar</b>
-      <div class="border mb-2 bg-silver">
+
+      <h3>Dark Navbar</h3>
+      <div class="border mb-1 bg-silver overflow-auto">
 
         <nav class="navbar text-light mb-1 navbar-expand-xs bg-black">
           <div class="container d-flex flex-nowrap flex-space-between">
             <div class="navbar-brand">
-              <a href="#">Logo</a>
+              <a href="javascript:">Logo</a>
             </div>
             <ul class="nav">   
               <li class="nav-item">
-                <a href="#" class="nav-link">Link 1</a>
+                <a href="javascript:" class="nav-link">Link 1</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">Link 2</a>
+                <a href="javascript:" class="nav-link">Link 2</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">Link 3</a>
+                <a href="javascript:" class="nav-link">Link 3</a>
               </li>
             </ul>
           </div>
@@ -240,24 +403,44 @@
 
       </div>
 
+      <button type="button" data-target="dark-nav-code" class="btn code-toggler d-block mb-1">Show code</button>
+      <pre id="dark-nav-code" class="hidden border mb-2 bg-silver overflow-auto code-block"
+>&lt;nav class=&quot;navbar text-light mb-1 navbar-expand-xs bg-black&quot;&gt;
+  &lt;div class=&quot;container d-flex flex-nowrap flex-space-between&quot;&gt;
+    &lt;div class=&quot;navbar-brand&quot;&gt;
+      &lt;a href=&quot;#&quot;&gt;Logo&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;ul class=&quot;nav&quot;&gt;   
+      &lt;li class=&quot;nav-item&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;Link 1&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;nav-item&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;Link 2&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;nav-item&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;Link 3&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</pre>
 
-      <b>Colored Navbar</b>
-      <div class="border mb-2 bg-silver">
+      <h3>Colored Navbar</h3>
+      <div class="border mb-1 bg-silver overflow-auto">
 
         <nav class="navbar text-light mb-1 navbar-expand-xs bg-blue">
           <div class="container d-flex flex-nowrap flex-space-between">
             <div class="navbar-brand">
-              <a href="#">Logo</a>
+              <a href="javascript:">Logo</a>
             </div>
             <ul class="nav">   
               <li class="nav-item">
-                <a href="#" class="nav-link">Link 1</a>
+                <a href="javascript:" class="nav-link">Link 1</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">Link 2</a>
+                <a href="javascript:" class="nav-link">Link 2</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">Link 3</a>
+                <a href="javascript:" class="nav-link">Link 3</a>
               </li>
             </ul>
           </div>
@@ -265,23 +448,44 @@
 
       </div>
 
-      <b>Themed Navbar</b>
-      <div class="border mb-2 bg-silver">
+      <button type="button" data-target="colored-nav-code" class="btn code-toggler d-block mb-1">Show code</button>
+      <pre id="colored-nav-code" class="hidden border mb-2 bg-silver overflow-auto code-block"
+>&lt;nav class=&quot;navbar text-light mb-1 navbar-expand-xs bg-blue&quot;&gt;
+  &lt;div class=&quot;container d-flex flex-nowrap flex-space-between&quot;&gt;
+    &lt;div class=&quot;navbar-brand&quot;&gt;
+      &lt;a href=&quot;#&quot;&gt;Logo&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;ul class=&quot;nav&quot;&gt;   
+      &lt;li class=&quot;nav-item&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;Link 1&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;nav-item&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;Link 2&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;nav-item&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;Link 3&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</pre>
+
+      <h3>Themed Navbar</h3>
+      <div class="border mb-1 bg-silver overflow-auto">
 
         <nav class="navbar mb-1 navbar-expand-xs theme-navy">
           <div class="container d-flex flex-nowrap flex-space-between">
             <div class="navbar-brand">
-              <a href="#">Logo</a>
+              <a href="javascript:">Logo</a>
             </div>
             <ul class="nav">   
               <li class="nav-item">
-                <a href="#" class="nav-link">Link 1</a>
+                <a href="javascript:" class="nav-link">Link 1</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">Link 2</a>
+                <a href="javascript:" class="nav-link">Link 2</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">Link 3</a>
+                <a href="javascript:" class="nav-link">Link 3</a>
               </li>
             </ul>
           </div>
@@ -289,25 +493,46 @@
 
       </div>
 
-      <b>Themed responsive Navbar with a textbox and a button</b>
-      <div class="border mb-2 bg-silver">
+      <button type="button" data-target="themed-nav-code" class="btn code-toggler d-block mb-1">Show code</button>
+      <pre id="themed-nav-code" class="hidden border mb-2 bg-silver overflow-auto code-block"
+>&lt;nav class=&quot;navbar mb-1 navbar-expand-xs theme-navy&quot;&gt;
+  &lt;div class=&quot;container d-flex flex-nowrap flex-space-between&quot;&gt;
+    &lt;div class=&quot;navbar-brand&quot;&gt;
+      &lt;a href=&quot;#&quot;&gt;Logo&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;ul class=&quot;nav&quot;&gt;   
+      &lt;li class=&quot;nav-item&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;Link 1&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;nav-item&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;Link 2&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;nav-item&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;Link 3&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</pre>
+
+      <h3>Themed responsive Navbar with a textbox and a button</h3>
+      <div class="border mb-1 bg-silver overflow-auto">
         <nav class="navbar theme-navy navbar-expand-md">
           <div class="container d-flex flex-space-between">
             <div class="navbar-brand">
-              <a href="#">Logo</a>
+              <a href="javascript:">Logo</a>
             </div>
             <button class="nav-toggler" data-target="#resp_nav3">
               <i class="fas fa-bars"></i>
             </button>
             <ul class="nav collapsed" id="resp_nav3">   
               <li class="nav-item">
-                <a href="#" class="nav-link">Link 1</a>
+                <a href="javascript:" class="nav-link">Link 1</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">Link 2</a>
+                <a href="javascript:" class="nav-link">Link 2</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">Link 3</a>
+                <a href="javascript:" class="nav-link">Link 3</a>
               </li>
               <li class="nav-form input-group">
                 <input type="text" class="nav-textbox theme-blue" placeholder="Search">
@@ -318,13 +543,75 @@
         </nav>
       </div>
 
+      <button type="button" data-target="themed-nav-2-code" class="btn code-toggler d-block mb-1">Show code</button>
+      <pre id="themed-nav-2-code" class="hidden border mb-2 bg-silver overflow-auto code-block"
+>&lt;nav class=&quot;navbar theme-navy navbar-expand-md&quot;&gt;
+  &lt;div class=&quot;container d-flex flex-space-between&quot;&gt;
+    &lt;div class=&quot;navbar-brand&quot;&gt;
+      &lt;a href=&quot;#&quot;&gt;Logo&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;button class=&quot;nav-toggler&quot; data-target=&quot;#resp_nav3&quot;&gt;
+      &lt;i class=&quot;fas fa-bars&quot;&gt;&lt;/i&gt;
+    &lt;/button&gt;
+    &lt;ul class=&quot;nav collapsed&quot; id=&quot;resp_nav3&quot;&gt;   
+      &lt;li class=&quot;nav-item&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;Link 1&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;nav-item&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;Link 2&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;nav-item&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;Link 3&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;nav-form input-group&quot;&gt;
+        &lt;input type=&quot;text&quot; class=&quot;nav-textbox theme-blue&quot; placeholder=&quot;Search&quot;&gt;
+        &lt;button class=&quot;btn nav-btn theme-blue&quot;&gt;&lt;i class=&quot;fas fa-search&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</pre>
+
     </section>
 
     <section class="container">
       <h2 id="sec_grid">Grid layout</h2>
+      <small><a href="#index">Back to top</a></small>
 
-      <b>Columns</b>
-      <div class="border mb-2 bg-silver">
+      <h3>Minimum screen size breakpoints</h3>
+      <table class="col-md-6 left mb-2">
+        <thead>
+          <tr>
+            <th class="col-xs-6">Code</th>
+            <th class="col-xs-6">Minimum screen size</th>
+          <tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-xs-6"><code>xs</code></td>
+            <td class="col-xs-6">0px</td>
+          <tr>
+          <tr>
+            <td class="col-xs-6"><code>sm</code></td>
+            <td class="col-xs-6">576px</td>
+          <tr>
+          <tr>
+            <td class="col-xs-6"><code>md</code></td>
+            <td class="col-xs-6">768px</td>
+          <tr>
+          <tr>
+            <td class="col-xs-6"><code>lg</code></td>
+            <td class="col-xs-6">992px</td>
+          <tr>
+          <tr>
+            <td class="col-xs-6"><code>xl</code></td>
+            <td class="col-xs-6">1200px</td>
+          <tr>
+          
+        </tbody>          
+      </table>
+
+      <h3>Columns</h3>
+      <div class="border mb-1 bg-silver overflow-auto">
         <div class="row">
           <div class="col-xs-1 theme-aqua center">
             1
@@ -425,9 +712,34 @@
 
       </div>
 
+      <p>Usage: <code>col-{breakpoint}-{size}</code><br>
+        <code>size</code> can be anywhere from <code>1</code> to <code>12</code><br>
+        <code>breakpoint</code> can be <code>xs</code>, <code>sm</code>, <code>md</code>, <code>lg</code> or <code>xl</code><br><br>
 
-      <b>Offsets</b>
-      <div class="border mb-2 bg-silver">
+        The grid can be divided into 12 equal columns. Applying <code>col-xs-8</code> on a grid element extends it to the 3/4 of the width of the grid on <code>xs</code> sized screens (e.g mobile phones). Combining it with <code>col-md-6</code> will make it so that it only covers half the grid width on <code>md</code> sized screens (e.g. tablets) but still covers 3/4 of the grid width on <code>xs</code> sized screens.
+      </p>
+
+      <div class="border mb-1 bg-silver overflow-auto">
+        <div class="row">
+          <div class="col-xs-8 col-md-6 theme-aqua center">
+            col-xs-8 and col-md-6
+          </div>
+        </div>
+      </div>
+
+      <button type="button" data-target="grid-code" class="btn code-toggler d-block mb-1">Show code</button>
+      <pre id="grid-code" class="hidden border mb-2 bg-silver overflow-auto code-block"
+>&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-xs-8 col-md-6 theme-aqua center&quot;&gt;
+    col-xs-8 and col-md-6
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+      <h3>Offsets</h3>
+      <p>
+        Offset adds a margin to the left side of the grid element.
+      </p>
+      <div class="border mb-1 bg-silver overflow-auto">
         <div class="row">
           <div class="col-xs-8 offset-xs-2 theme-black center">
             col-xs-8 <br>
@@ -435,13 +747,23 @@
           </div>
         </div>
       </div>
+
+      <button type="button" data-target="grid-offset-code" class="btn code-toggler d-block mb-1">Show code</button>
+      <pre id="grid-offset-code" class="hidden border mb-2 bg-silver overflow-auto code-block"
+>&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-xs-8 offset-xs-2 theme-black center&quot;&gt;
+    col-xs-8 &lt;br&gt;
+    with offset-xs-2
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
     </section>
 
     <section class="container">
       <h2 id="sec_forms">Forms</h2>
+      <small><a href="#index">Back to top</a></small>
 
-      <b>Basic Form</b>
-      <div class="border mb-2 bg-silver p-1">
+      <h3>Basic Form</h3>
+      <div class="border mb-1 bg-silver overflow-auto p-1">
         <form class="p-1 col-md-6 offset-md-3 bg-white rounded-5">
           <h2>Sign In</h2>
           <label class="form-control" for="textbox1">Username</label>
@@ -453,8 +775,20 @@
         </form>
       </div>
 
-      <b>Themed Form</b>
-      <div class="border mb-2 bg-silver p-1">
+      <button type="button" data-target="basic-form-code" class="btn code-toggler d-block mb-1">Show code</button>
+      <pre id="basic-form-code" class="hidden border mb-2 bg-silver overflow-auto code-block"
+>&lt;form class=&quot;p-1 col-md-6 offset-md-3 bg-white rounded-5&quot;&gt;
+  &lt;h2&gt;Sign In&lt;/h2&gt;
+  &lt;label class=&quot;form-control&quot; for=&quot;textbox1&quot;&gt;Username&lt;/label&gt;
+  &lt;input type=&quot;text&quot; id=&quot;textbox1&quot; class=&quot;form-control input-block&quot;&gt;
+  &lt;label class=&quot;form-control&quot; for=&quot;password1&quot;&gt;Password&lt;/label&gt;
+  &lt;input type=&quot;password&quot; id=&quot;password1&quot; class=&quot;form-control input-block&quot;&gt;
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt; Remember me&lt;/label&gt;
+  &lt;button type=&quot;submit&quot; class=&quot;btn input-block&quot;&gt;Sign In&lt;/button&gt;
+&lt;/form&gt;</pre>
+
+      <h3>Themed Form</h3>
+      <div class="border mb-1 bg-silver overflow-auto p-1">
         <form class="p-1 col-md-6 offset-md-3 theme-navy rounded-5">
           <h2>Sign In</h2>
           <label for="textbox2" class="form-control">Username</label>
@@ -466,16 +800,35 @@
         </form>
       </div>
 
-      <b>Inline Form group</b>
-      <div class="border mb-2 bg-silver p-1">
+      <button type="button" data-target="themed-form-code" class="btn code-toggler d-block mb-1">Show code</button>
+      <pre id="themed-form-code" class="hidden border mb-2 bg-silver overflow-auto code-block"
+>&lt;form class=&quot;p-1 col-md-6 offset-md-3 theme-navy rounded-5&quot;&gt;
+  &lt;h2&gt;Sign In&lt;/h2&gt;
+  &lt;label for=&quot;textbox2&quot; class=&quot;form-control&quot;&gt;Username&lt;/label&gt;
+  &lt;input type=&quot;text&quot; id=&quot;textbox2&quot; class=&quot;theme-blue form-control input-block&quot;&gt;
+  &lt;label for=&quot;password2&quot; class=&quot;form-control&quot;&gt;Password&lt;/label&gt;
+  &lt;input type=&quot;password&quot; id=&quot;password2&quot; class=&quot;theme-blue form-control input-block&quot;&gt;
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt; Remember me&lt;/label&gt;
+  &lt;button type=&quot;submit&quot; class=&quot;btn input-block theme-blue&quot;&gt;Sign In&lt;/button&gt;
+&lt;/form&gt;</pre>
+
+      <h3>Inline Form group</h3>
+      <div class="border mb-1 bg-silver overflow-auto p-1">
         <div class="input-group col-md-6 offset-md-3 width-100 border">
           <input type="text" id="textbox2" placeholder="Search" class="form-inline width-100">
           <button type="button" class="btn flex-shrink-0">Search</button>
         </div>
       </div>
 
-      <b>Inline Button group</b>
-      <div class="border mb-2 bg-silver p-1">
+      <button type="button" data-target="inline-form-code" class="btn code-toggler d-block mb-1">Show code</button>
+      <pre id="inline-form-code" class="hidden border mb-2 bg-silver overflow-auto code-block"
+>&lt;div class=&quot;input-group col-md-6 offset-md-3 width-100 border&quot;&gt;
+  &lt;input type=&quot;text&quot; id=&quot;textbox2&quot; placeholder=&quot;Search&quot; class=&quot;form-inline width-100&quot;&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn flex-shrink-0&quot;&gt;Search&lt;/button&gt;
+&lt;/div&gt;</pre>
+
+      <h3>Inline Button group</h3>
+      <div class="border mb-1 bg-silver overflow-auto p-1">
         <form class="p-1 col-md-6 offset-md-3 bg-white rounded-5">
           <h2>Subscribe</h2>
           <label for="textbox3" class="form-control">Name</label>
@@ -490,13 +843,34 @@
         </form>
       </div>
 
+      <button type="button" data-target="inline-button-code" class="btn code-toggler d-block mb-1">Show code</button>
+      <pre id="inline-button-code" class="hidden border mb-2 bg-silver overflow-auto code-block"
+>&lt;form class=&quot;p-1 col-md-6 offset-md-3 bg-white rounded-5&quot;&gt;
+  &lt;h2&gt;Subscribe&lt;/h2&gt;
+  &lt;label for=&quot;textbox3&quot; class=&quot;form-control&quot;&gt;Name&lt;/label&gt;
+  &lt;input type=&quot;text&quot; id=&quot;textbox3&quot; class=&quot;form-control input-block&quot;&gt;
+  &lt;label for=&quot;textbox4&quot; class=&quot;form-control&quot;&gt;Email&lt;/label&gt;
+  &lt;input type=&quot;email&quot; id=&quot;textbox4&quot; class=&quot;form-control input-block&quot;&gt;
+
+  &lt;div class=&quot;input-group&quot;&gt;
+    &lt;button type=&quot;reset&quot; class=&quot;btn input-block&quot;&gt;Reset&lt;/button&gt;
+    &lt;button type=&quot;submit&quot; class=&quot;btn input-block&quot;&gt;Submit&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</pre>
+
     </section>
 
 
     <section class="container">
       <h2 id="sec_colors">Colors and themes</h2>
+      <small><a href="#index">Back to top</a></small>
 
-      <b>Themes</b>
+      <h3>Themes</h3>
+      <p>
+        Usage: Add <code>theme-{color}</code> class to the element.<br>
+        Replace <code>{color}</code> with any preset color from the grid below.<br>
+        ex. <code>theme-navy</code> sets an element's theme to navy blue.
+      </p>
       <div class="border mb-2 bg-white p-1">
         <div class="border width-100 row">
           <div class="col-xs-4">
@@ -527,7 +901,12 @@
         </div>
       </div>  
 
-      <b>Background</b>
+      <h3>Background</h3>
+      <p>
+        Usage: Add <code>bg-{color}</code> class to the element.<br>
+        Replace <code>{color}</code> with any preset color from the grid below.<br>
+        ex. <code>bg-navy</code> sets an element's background color to navy blue.
+      </p>
       <div class="border mb-2 bg-white p-1">
         <div class="border width-100 row">
           <div class="col-xs-4">
@@ -558,7 +937,11 @@
         </div>
       </div>  
 
-      <b>Text (with shadow)</b>
+      <h3>Text (with shadow)</h3>
+      <p>
+        Usage: Simply add the name of the color to the class of the element.<br>
+        ex. <code>blue</code> changes an element's text color to blue.
+      </p>
       <div class="border mb-2 bg-white p-1">
         <div class="border width-100 row bg-silver">
           <div class="col-xs-4">
@@ -594,64 +977,76 @@
 
     <section class="container">
       <h2 id="sec_border">Border</h2>
+      <small><a href="#index">Back to top</a></small>
 
-      <b>Border</b>
+      <p>Note: <code>{border-width}</code> can be anywhere from <code>0</code> to <code>10</code> (in pixels)</p>
+
+      <h3>Border</h3>
+      <p>Class: <code>border</code></p>
       <div class="border mb-2 p-1">
         <div class="border center">
           Simple Border
         </div>
       </div>
 
-      <b>No border</b>
+      <h3>No border</h3>
+      <p>Class: <code>no-border</code></p>
       <div class="border mb-2 p-1">
         <div class="no-border center">
           No Border
         </div>
       </div>
 
-      <b>Border with custom width</b>
+      <h3>Border with custom width</h3>
+      <p>Class: <code>b-{border-width}</code></p>
       <div class="border mb-2 p-1">
         <div class="b-10 center">
           Simple Border
         </div>
       </div>
 
-      <b>Border top</b>
+      <h3>Border top</h3>
+      <p>Class: <code>bt-{border-width}</code></p>
       <div class="border mb-2 p-1">
         <div class="bt-5 center">
           Top
         </div>
       </div>
 
-      <b>Border bottom</b>
+      <h3>Border bottom</h3>
+      <p>Class: <code>bb-{border-width}</code></p>
       <div class="border mb-2 p-1">
         <div class="bb-5 center">
           Bottom
         </div>
       </div>
 
-      <b>Border left</b>
+      <h3>Border left</h3>
+      <p>Class: <code>bl-{border-width}</code></p>
       <div class="border mb-2 p-1">
         <div class="bl-5 center">
           Left
         </div>
       </div>
 
-      <b>Border right</b>
+      <h3>Border right</h3>
+      <p>Class: <code>br-{border-width}</code></p>
       <div class="border mb-2 p-1">
         <div class="br-5 center">
           Right
         </div>
       </div>
 
-      <b>Border left and right</b>
+      <h3>Border left and right</h3>
+      <p>Class: <code>bx-{border-width}</code></p>
       <div class="border mb-2 p-1">
         <div class="bx-5 center">
           Left and right
         </div>
       </div>
 
-      <b>Border top and bottom</b>
+      <h3>Border top and bottom</h3>
+      <p>Class: <code>by-{border-width}</code></p>
       <div class="border mb-2 p-1">
         <div class="by-5 center">
           Top and bottom
@@ -662,8 +1057,12 @@
 
     <section class="container">
       <h2 id="sec_padding">Padding</h2>
+      <small><a href="#index">Back to top</a></small>
 
-      <b>Around</b>
+      <p>Note: <code>{padding-width}</code> can be anywhere from <code>0</code> to <code>10</code> (in rems)</p>
+
+      <h3>Around</h3>
+      <p>Class: <code>p-{padding-width}</code></p>
       <div class="border mb-2 p-1">
         <div class="bg-silver p-2">
           <div class="border center bg-gray">
@@ -672,7 +1071,8 @@
         </div>
       </div>
 
-      <b>Top</b>
+      <h3>Top</h3>
+      <p>Class: <code>pt-{padding-width}</code></p>
       <div class="border mb-2 p-1">
         <div class="bg-silver pt-2">
           <div class="border center bg-gray">
@@ -681,7 +1081,8 @@
         </div>
       </div>
 
-      <b>Bottom</b>
+      <h3>Bottom</h3>
+      <p>Class: <code>pb-{padding-width}</code></p>
       <div class="border mb-2 p-1">
         <div class="bg-silver pb-2">
           <div class="border center bg-gray">
@@ -690,7 +1091,8 @@
         </div>
       </div>
 
-      <b>Left</b>
+      <h3>Left</h3>
+      <p>Class: <code>pl-{padding-width}</code></p>
       <div class="border mb-2 p-1">
         <div class="bg-silver pl-2">
           <div class="border center bg-gray">
@@ -699,7 +1101,8 @@
         </div>
       </div>
 
-      <b>Right</b>
+      <h3>Right</h3>
+      <p>Class: <code>pr-{padding-width}</code></p>
       <div class="border mb-2 p-1">
         <div class="bg-silver pr-2">
           <div class="border center bg-gray">
@@ -708,7 +1111,8 @@
         </div>
       </div>
 
-      <b>Top and bottom</b>
+      <h3>Top and bottom</h3>
+      <p>Class: <code>py-{padding-width}</code></p>
       <div class="border mb-2 p-1">
         <div class="bg-silver py-2">
           <div class="border center bg-gray">
@@ -717,7 +1121,8 @@
         </div>
       </div>
 
-      <b>Left and right</b>
+      <h3>Left and right</h3>
+      <p>Class: <code>px-{padding-width}</code></p>
       <div class="border mb-2 p-1">
         <div class="bg-silver px-2">
           <div class="border center bg-gray">
@@ -729,8 +1134,12 @@
 
     <section class="container">
       <h2 id="sec_margin">Margin</h2>
+      <small><a href="#index">Back to top</a></small>
 
-      <b>Around</b>
+      <p>Note: <code>{margin-width}</code> can be anywhere from <code>0</code> to <code>10</code> (in rems)</p>
+
+      <h3>Around</h3>
+      <p>Class: <code>m-{margin-width}</code></p>
       <div class="border mb-2 p-1">
         <div class="bg-silver border">
           <div class="bg-gray center m-2">
@@ -739,7 +1148,8 @@
         </div>
       </div>
 
-      <b>Top</b>
+      <h3>Top</h3>
+      <p>Class: <code>mt-{margin-width}</code></p>
       <div class="border mb-2 p-1">
         <div class="bg-silver border">
           <div class="bg-gray center mt-2">
@@ -748,7 +1158,8 @@
         </div>
       </div>
 
-      <b>Bottom</b>
+      <h3>Bottom</h3>
+      <p>Class: <code>mb-{margin-width}</code></p>
       <div class="border mb-2 p-1">
         <div class="bg-silver border">
           <div class="bg-gray center mb-2">
@@ -757,7 +1168,8 @@
         </div>
       </div>
 
-      <b>Left</b>
+      <h3>Left</h3>
+      <p>Class: <code>ml-{margin-width}</code></p>
       <div class="border mb-2 p-1">
         <div class="bg-silver border">
           <div class="bg-gray center ml-2">
@@ -766,7 +1178,8 @@
         </div>
       </div>
 
-      <b>Right</b>
+      <h3>Right</h3>
+      <p>Class: <code>mr-{margin-width}</code></p>
       <div class="border mb-2 p-1">
         <div class="bg-silver border">
           <div class="bg-gray center mr-2">
@@ -775,7 +1188,8 @@
         </div>
       </div>
 
-      <b>Top and bottom</b>
+      <h3>Top and bottom</h3>
+      <p>Class: <code>my-{margin-width}</code></p>
       <div class="border mb-2 p-1">
         <div class="bg-silver border">
           <div class="bg-gray center my-2">
@@ -784,7 +1198,8 @@
         </div>
       </div>
 
-      <b>Left and right</b>
+      <h3>Left and right</h3>
+      <p>Class: <code>mx-{margin-width}</code></p>
       <div class="border mb-2 p-1">
         <div class="bg-silver border">
           <div class="bg-gray center mx-2">
@@ -797,8 +1212,9 @@
 
     <section class="container">
       <h2 id="sec_utilities">Utilities</h2>
+      <small><a href="#index">Back to top</a></small>
 
-      <h4>Display properties</h4>
+      <h3>Display properties</h3>
       <ul class="mb-2">
         <li><b>Block</b> - <code>d-block</code></li>
         <li><b>Inline</b> - <code>d-inline</code></li>
@@ -807,14 +1223,14 @@
         <li><b>Hidden</b> - <code>hidden</code>, <code>d-hidden</code>, or <code>d-none</code></li>        
       </ul>
 
-      <h4>Float and clearfix</h4>
+      <h3>Float and clearfix</h3>
       <ul class="mb-2">
         <li><b>Left</b> - <code>float-left</code></li>
         <li><b>Right</b> - <code>float-right</code></li>
         <li><b>Clearfix</b> - <code>clearfix</code></li>        
       </ul>
 
-      <h4>Text alignment</h4>
+      <h3>Text alignment</h3>
       <ul class="mb-2">
         <li><b>Left</b> - <code>left</code></li>
         <li><b>Right</b> - <code>right</code></li>
@@ -822,10 +1238,10 @@
       </ul>
 
 
-      <h4>Flexbox properties</h4>
+      <h3>Flexbox properties</h3>
       <ul class="mb-2">
         <li>
-          <h5>Justify content</h5>
+          <h4>Justify content</h4>
           <ul>          
             <li><b>Start</b> - <code>flex-start</code></li> 
             <li><b>End</b> - <code>flex-end</code></li> 
@@ -835,21 +1251,21 @@
           </ul>
         </li> 
         <li>
-          <h5>Flex direction</h5>
+          <h4>Flex direction</h4>
           <ul>          
             <li><b>Row</b> - <code>flex-direction-row</code></li> 
             <li><b>Column</b> - <code>flex-direction-column</code></li>
           </ul>
         </li> 
         <li>
-          <h5>Wrap</h5>
+          <h4>Wrap</h4>
           <ul>          
             <li><b>Wrap</b> - <code>flex-wrap</code></li> 
             <li><b>No wrap</b> - <code>flex-nowrap</code></li>
           </ul>
         </li>  
         <li>
-          <h5>Grow and shrink</h5>
+          <h4>Grow and shrink</h4>
           <ul>          
             <li><b>Grow</b> - <code>flex-grow-1</code></li> 
             <li><b>No grow</b> - <code>flex-grow-0</code></li>
@@ -859,7 +1275,7 @@
         </li>           
       </ul>
 
-      <h4>Rounded corners</h4>
+      <h3>Rounded corners</h3>
       <ul class="mb-2">
         <li><b>Custom radius</b> - <code>rounded-{radius}</code></li>
         <em>radius</em> is in pixels. It can be 0 or any multiple of 5 up to 30 (0, 5, 10, 15 ... 30)
@@ -867,7 +1283,7 @@
         <li><b>Circle</b> - <code>rounded-circle</code></li>
       </ul>
       
-      <h4>Border</h4>
+      <h3>Border</h3>
       <ul class="mb-2">
         <li><b>Around (1px)</b> - <code>border</code></li>
         <li><b>No border</b> - <code>no-border</code></li>
@@ -882,7 +1298,7 @@
         e.g. <code>bt-5</code> produces a 5px border to the top     
       </ul>
 
-      <h4>Margin and padding</h4>
+      <h3>Margin and padding</h3>
       <ul class="mb-2">
         <li><b>Custom margin/padding width</b> - <code>m-{width}</code> and <code>p-{width}</code></li>
         <em>width</em> is in <em>rem</em> unit. It can be anywhere between 0 and 10.
@@ -896,13 +1312,16 @@
        
       </ul>
 
-      <h4>Others</h4>
+      <h3>Others</h3>
       <ul class="mb-2">
         <li><b>Text shadow</b> - <code>text-shadow</code></li>
         <li><b>Hide overflow</b> - <code>overflow-hidden</code></li>
         <li><b>Auto overflow</b> - <code>overflow-auto</code></li>
+        <li><b>Code block</b> - <code>code-block</code></li>
       </ul>
-
     </section>
+
+    <script src="toggle-code.js"></script>
+    <script src="framework.js"></script>
   </body>
 </html>

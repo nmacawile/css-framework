@@ -301,6 +301,16 @@ $percentage: 0;
   $percentage: $percentage + 10;
 }
 
+/* CODE BLOCK */
+.code-block {
+  font-size: .8rem;
+  font-family: monospace;
+  white-space: pre;
+  line-height: 1rem;
+  padding: 15px;
+  color: rgba(0,0,0,.75);
+}
+
 /* GRID ELEMENTS */
 .container {
   flex-wrap: wrap;
